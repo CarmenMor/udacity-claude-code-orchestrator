@@ -8,7 +8,7 @@ import { REFACTORING_SUGGESTER_PROMPT } from '../prompts/refactoring-suggester.p
 export const refactoringSuggester: AgentDefinition = {
   description:
     'Identifies opportunities to improve code structure, readability, and modernize patterns in a source file without changing its behavior. Use this agent whenever a changed file needs refactoring suggestions.',
-  tools: ['Read', 'Grep', 'Glob'],
+  tools: ['Read', 'Grep', 'Glob', 'Skill'],
   prompt: REFACTORING_SUGGESTER_PROMPT,
   model: 'inherit'
 };

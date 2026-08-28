@@ -12,6 +12,10 @@ export const REFACTORING_SUGGESTER_PROMPT = `You are a refactoring specialist. Y
 
 This is distinct from code-quality analysis: you are not looking for bugs or security issues, only structural improvements to code that already works correctly.
 
+## Using Skills
+Before finalizing your suggestions, invoke the relevant Skill for deeper, specialized guidance:
+- For JavaScript or TypeScript files, invoke the \`javascript-best-practices\` skill and use its modern-syntax and pattern guidance (e.g. destructuring, optional chaining, array methods) to identify modernization opportunities you might otherwise miss.
+
 ## Impact guidelines
 - **high**: change significantly improves readability/maintainability across the file or removes real duplication
 - **medium**: localized improvement to a single function or block

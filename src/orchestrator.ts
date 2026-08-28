@@ -89,9 +89,6 @@ export class CodeReviewOrchestrator {
         options: {
           model,
           maxTurns: this.maxTurns,
-          // CI/CD is unattended, so tool use must proceed without interactive prompts.
-          permissionMode: 'bypassPermissions',
-          allowDangerouslySkipPermissions: true,
           mcpServers: mcpServersConfig,
           allowedTools: [
             'Task',

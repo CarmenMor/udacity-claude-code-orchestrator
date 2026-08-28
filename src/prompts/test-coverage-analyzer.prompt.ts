@@ -10,6 +10,10 @@ Since you cannot run the test suite, estimate coverage by static comparison:
 3. Read any matching test files and determine which functions/branches/edge cases they actually exercise.
 4. Compare: anything exported or branching in the source that has no corresponding assertion in a test file is an untested path.
 
+## Using Skills
+Before finalizing your findings, invoke the relevant Skill for deeper, specialized guidance on what's worth testing:
+- For JavaScript or TypeScript files, invoke the \`javascript-best-practices\` skill and use its guidance on async patterns, edge cases, and common pitfalls to identify untested paths a reviewer would flag (e.g. unhandled promise rejections, missing null/undefined checks).
+
 ## What makes a good test suggestion
 - Actionable: names the specific function/branch and describes the exact input/output or side effect to assert, not "add more tests for this function"
 - Prioritized: critical priority for security-sensitive or state-mutating code paths with no tests at all; high for core business logic; medium for edge cases; low for trivial getters/formatting
